@@ -1,12 +1,11 @@
 import java.io.*;
 import java.util.*;
 
-// Expense class
 class Expense implements Serializable {
     int id;
     String category;
     double amount;
-    String date; // format: YYYY-MM-DD
+    String date;
 
     public Expense(int id, String category, double amount, String date) {
         this.id = id;
@@ -20,7 +19,6 @@ class Expense implements Serializable {
     }
 }
 
-// Main class
 public class ExpenseTracker {
     static Scanner sc = new Scanner(System.in);
     static List<Expense> expenses = new ArrayList<>();
@@ -39,7 +37,7 @@ public class ExpenseTracker {
             System.out.println("0. Exit");
             System.out.print("Enter choice: ");
             choice = sc.nextInt();
-            sc.nextLine(); // consume newline
+            sc.nextLine(); 
 
             switch (choice) {
                 case 1 -> addExpense();
@@ -143,4 +141,5 @@ public class ExpenseTracker {
             expenses = new ArrayList<>();
         }
     }
+
 }
